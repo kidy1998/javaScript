@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_함수</title>
+</head>
+<body>
+    
+    <h1>기본적인 함수의 선언,정의,호출</h1>
+
+    <pre>
+        function 함수명(매개변수) { //함수 선언
+            //함수 정의
+        }
+
+        함수명();  //함수 호출
+    </pre>
+
+    <button id="btn1" onclick="clickCount(this)">0</button>
+    <hr>
+    <h1>익명 함수</h1>
+
+    <pre>
+        function([매개변수]) { //함수선언
+            //함수정의
+        }
+    </pre>
+
+    - 이름이 없기 때문에 호출 안됨
+    - 이벤트 핸들러와 같이 바로 동작하는 함수가 필요한 상황
+
+    <h1>즉시 실행 함수</h1>
+    <pre>
+        (function([매개변수]) {
+            // 함수정의
+        })();
+
+        - 익명함수의 한 종류로 함수가 정의되자마자 바로 실행
+    </pre>
+
+
+    <h1>화살표 함수</h1>
+    <pre>
+
+        익명함수의 표현식을 간단히 표현한 표기법
+        작성법 1. 기본형태 ([매개변수]) => {함수정의}
+
+            익명함수 : function() {}
+            화살표함수 : () => {}
+        
+        작성법 2. 매개변수가 "하나"인경우 () 생략가능
+
+            익명함수 : function(e) {e.target...}
+            화살표함수 : e => e.target
+            
+            매개변수가 없을 경우는 무조건 () 작성
+    
+        작성법 3. 함수 정의 부분이 return[식 또는 값] 으로만 작성되어있는 경우
+            {}, return 생략 가능
+
+            익명함수 : function(num) {return num*10}
+            화살표함수 : num => num*10;
+
+            ** return 값이 객체이면 불가능
+            num => {price: num*1000, n:1000} -> X
+            num => {return {price: num*1000, n:1000}}
+
+    </pre>
+
+    <button></button>
+
+
+    <script src="js/14_함수.js"></script>   
+</body>
+</html>

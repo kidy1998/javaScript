@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto</title>
+    <style>
+        
+        .lottonum {
+            width: 100px;
+            height:100px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 50px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 80px;
+        }
+        
+        #btn {
+            width: 300px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        .numlist {
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="numlist">
+        <div class="lottonum">L</div>
+        <div class="lottonum">O</div>
+        <div class="lottonum">T</div>
+        <div class="lottonum">T</div>
+        <div class="lottonum">O</div>
+        <div class="lottonum">!</div>  
+    </div>
+
+    <div class="numlist">
+        <button id="btn" onclick="createNum()" >로또 번호 생성</button>
+    </div>
+   
+   
+
+    <script src="js/lotto.js"></script>
+</body>
+</html>
